@@ -1,7 +1,7 @@
 #include <stdio.h>
 void main()
 {
-    int x, y;
+    int x;
     int list[x + 1], num, pos;
     printf("Enter the length of list: ");
     scanf("%d", &x);
