@@ -1,14 +1,28 @@
 #include <stdio.h>
 void main()
 {
-    int n, list[10], num, pos;
+    int x, y;
+    int list[y], num, pos;
     printf("Enter the length of list: ");
-    scanf("%d", &n);
+    scanf("%d", &x);
+    y = x + 1;
     printf("Enter the elements for list: ");
-    for(int i = 0; i < n; i++) scanf("%d", &list[i]);
+    for(int i = 0; i < x; i++) scanf("%d", &list[i]);
     printf("Enter the number to be added followed by position where to be added: ");
     scanf("%d %d", &num, &pos);
+    for(int i =  x; i >= pos; i--) list[i] = list[i - 1];
     list[pos - 1] = num;
     printf("List of elements after insertion of %d: ", num);
-    for(int i = 0; i < n; i++) printf("%d\t", list[i]);
+    for(int i = 0; i < y; i++) printf("%d\t", list[i]);
 }
+
+/* input:
+    lenght of list = 5
+    elements of  list = 1 2 3 4 5
+    next prompt for num and at pos = 6 2
+
+    Expected output = 1 6 2 3 4 5
+
+    Actuall output = 1 2 3 4 5 5
+    
+    Try to fix this one... */
