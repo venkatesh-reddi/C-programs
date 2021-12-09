@@ -2,10 +2,9 @@
 void main()
 {
     int x, y;
-    int list[y], num, pos;
+    int list[x + 1], num, pos;
     printf("Enter the length of list: ");
     scanf("%d", &x);
-    y = x + 1;
     printf("Enter the elements for list: ");
     for(int i = 0; i < x; i++) scanf("%d", &list[i]);
     printf("Enter the number to be added followed by position where to be added: ");
@@ -13,7 +12,7 @@ void main()
     for(int i =  x; i >= pos; i--) list[i] = list[i - 1];
     list[pos - 1] = num;
     printf("List of elements after insertion of %d: ", num);
-    for(int i = 0; i < y; i++) printf("%d\t", list[i]);
+    for(int i = 0; i < x + 1; i++) printf("%d\t", list[i]);
 }
 
 /* input:
