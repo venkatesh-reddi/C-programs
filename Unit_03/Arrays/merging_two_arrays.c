@@ -1,26 +1,46 @@
 #include <stdio.h>
 void main()
 {
-    int m, n;
-    int array1[m], array2[n];
-    printf("Enter the size of the array one: ");
-    scanf("%d", &m);
-    printf("Enter the size of the array two: ");
-    scanf("%d", &n);
-    printf("Enter the elements for the array one: ");
-    for(int i = 0; i < m; i++)
-    scanf("%d", &array1[i]);
-    printf("Enter the elements for the array two: ");
-    for(int i = 0; i < n; i++)
-    scanf("%d", &array2[i]);
-    int k = m + n;
-    int array[k];
-    for(int i = 0; i < m; i++)
-    array[i] = array1[i];
-    for(int i = m + 1; i < k; i++){
-    for(int j = 0; j < n; j++)
-    array[i] = array2[j]; 
+    int arr1[30], arr2[30], res[60];
+    int i, j, k, n1, n2;
+    printf("Enter the number of elements in the first array: ");
+    scanf("%d", &n1);
+    printf("Enter %d elements for first array: ", n1);
+    for( i = 0; i < n1; i++){
+        scanf("%d", &arr1[i]);
     }
-    for(int i = 0; i < k; i++)
-    printf("%d\t", array[i]);
+    printf("\nEnter the number of elements in second array: ");
+    scanf("%d", &n2);
+    printf("Enter %d elements for second array: ", n2);
+    for( i = 0; i < n2; i++){
+        scanf("%d", &arr2[i]);
+    }
+    i = 0;
+    j = 0; 
+    k = 0;
+    while(i < n1 && j < n2){
+        if(arr1[i] <= arr2[j]){
+            res[k] = arr1[i];
+            i++;
+            k++;
+        }
+        else{
+            res[k] = arr2[j];
+            k++;
+            j++;
+        }
+    }
+    while(i < n1){
+        res[k] = arr1[i];
+        i++;
+        k++;
+    }
+    while(j < n2){
+        res[k] = arr2[j];
+        k++;
+        j++;
+    }
+    printf("\nMerged array is: ");
+    for(i = 0; i < n1 + n2; i++)
+    printf("%d\t", res[i]);
 }
