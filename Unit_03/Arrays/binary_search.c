@@ -4,7 +4,7 @@ void main()
     int a[100], first, last, middle, n, search;
     printf("Enter the size of the list: ");
     scanf("%d", &n);
-    printf("Enter the %d elements for the list: ");
+    printf("Enter the %d elements for the list: ", n);
     for(int i = 0; i < n; i++)
     scanf("%d", &a[i]);
     printf("Enter the element to search:");
