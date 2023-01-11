@@ -9,10 +9,10 @@ void main()
         printf("A is not less than b\n");
     }
     if(a>c){
-        printf("A is greater than b\n");
+        printf("A is greater than c\n");
     }
     else{
-        printf("A is not greater than b\n");
+        printf("A is not greater than c\n");
     }
     if(a<=b){
         printf("A is less than or equal to b\n");
