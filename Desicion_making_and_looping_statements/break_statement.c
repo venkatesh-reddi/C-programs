@@ -2,7 +2,7 @@
 void main()
 {
     int i = 1;
-    for(i = 1; i <= 10; i++){
+    for(i ; i <= 10; i++){
         printf("%d\t", i);
         if(i == 5) break;
     }
