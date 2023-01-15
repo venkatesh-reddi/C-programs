@@ -5,8 +5,8 @@ void main()
     printf("Enter a number: ");
     scanf("%d", &n);
     while(i<=n){
-        fact = fact * i;
-        i = i +  1;
+        fact *= i;
+        i++;
     }
     printf("The factorial of %d is %d\n", n, fact);
 
