@@ -1,8 +1,8 @@
 #include <stdio.h>
 void main()
 {
-    int i = 1, num, sum = 0;
-    for(i = 0; i < 5; i++){
+    int num, sum = 0;
+    for(int i = 0; i < 5; i++){
         printf("Enter an integer: ");
         scanf("%d", &num);
         if(num < 0){
