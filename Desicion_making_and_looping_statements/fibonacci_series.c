@@ -11,7 +11,7 @@ void main()
         printf("%d\t", f3);
         f1 = f2;
         f2 = f3;
-        i = i + 1;
+        i++;
     }
     printf("\n");
 }
